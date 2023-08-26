@@ -25,6 +25,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/ag-grid/dist/styles/ag-theme-balham.css",
+              "node_modules/ag-grid/dist/styles/ag-grid.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -60,7 +62,9 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "leave:build:production"
+              "browserTarget": "leave:build:production",
+              "proxyConfig": "src/proxy.conf.json"
+
             },
             "development": {
               "browserTarget": "leave:build:development"
@@ -94,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ec9bc9ef-6c29-409d-94f0-95d05510a51c"
   }
 }
